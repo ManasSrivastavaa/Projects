@@ -1,0 +1,26 @@
+<app-nav-bar [isNotLoggedIn]="isNotLoggedIn"></app-nav-bar>
+<div class="container">
+  <section class="login">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="getValueLoginForm()">
+      <div class="inputs">
+      <input
+        formControlName="email"
+        placeholder="Enter Your Email"
+        type="text"
+        id="Email"
+      />
+      <p></p>
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Enter Your Password"
+        type="text"
+        id="pwd"
+      />
+    </div>
+      <input class="button" id="login" type="submit" value="LOG IN" />
+      <p>Don't have an account? <a routerLink="/register"> Sign Up</a></p>
+    </form>
+  </section>
+</div>

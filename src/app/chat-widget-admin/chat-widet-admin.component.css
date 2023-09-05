@@ -1,0 +1,80 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  margin-left: 50px;
+}
+.choice {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: large;
+  width: 500px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px gainsboro, -2px -2px 2px gainsboro;
+}
+.submit{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: gainsboro;
+  font-size: x-large;
+}
+.navButton{
+height: 100%;
+width:100%;
+position: relative;
+background: none;
+border: none;
+}
+.navButton:hover{
+  box-shadow: 0 12px 8px 0 rgba(0,0,0,0.24), 0 17px 16px 0 rgba(0,0,0,0.19);
+}
+.navButtonDiv{
+  width: 40%;
+  display: flex;
+  padding-bottom:10px;
+justify-content: space-around;
+align-items: center;
+}
+.navbar {
+  position: absolute;
+  top: 550px;
+  left: 1200px;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  width: 150px;
+  background-color: antiquewhite;
+  cursor: move;
+}
+p{
+font-size: 100%;
+}
+.iframeDiv{
+position: absolute;
+}
+.pDiv{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  appearance: none;
+}
+.containerNav{
+  display: flex;
+  flex-direction: column;
+}

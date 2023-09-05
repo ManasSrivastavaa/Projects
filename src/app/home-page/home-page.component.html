@@ -1,0 +1,9 @@
+
+
+<app-nav-bar (showChatEvent)="showChat()"></app-nav-bar>
+<body id="body" #body>
+  <ng-keyboard-shortcuts [shortcuts]="shortcuts"></ng-keyboard-shortcuts>
+<!-- <textarea name="" id="" cols="30" rows="10" [value]="textvalue"></textarea> -->
+<!-- [style.left.px]="divLeft" [style.top.px]="divTop" -->
+<app-chat-widget *ngIf="isEnabled" id="chatScreen" [cdkDragFreeDragPosition]="dragPosition" (setDefaultEvent)="setDefault()" (cdkDragEnded)="getPosition($event)" cdkDragBoundary="body" #chatScreen [fontColor]="fontColor" [fontSize]="fontSize" [fontFamily]="fontFamily" [fontText]="fontText" [hidden]="isNavHidden" [navHeight]="this.service.height"  cdkDrag (resizeEvent)="resizeNav($event)"  (hideNavEvent)="hideNav()"  [style.height.px]="divHeight" [style.width.px]="divWidth" [navColor]="divBgColor" ></app-chat-widget>
+</body>

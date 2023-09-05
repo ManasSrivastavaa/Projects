@@ -1,0 +1,12 @@
+<div class="container" [hidden]="isNavHidden">
+<nav class="navbar" [style.height.px]="navHeight"  [style.background-color]="navColor" cdkDragHandle [hidden]="isNavHidden">
+  <div class="pdiv"><p [style.font-size.%]="fontSize" [style.font-family]="fontFamily" [style.color]="fontColor">{{fontText}}</p></div>
+      <div class="buttons">
+        <button *ngIf="showMinBottonofShowChat" (click)="setDefault()" matTooltip="Minimize" matTooltipPosition="below">_</button>
+    <button  (click)="hideIframe()" *ngIf="showMinBotton" matTooltip="Minimize" matTooltipPosition="below">_</button>
+    <button (click)="showIframe()" *ngIf="showMaxBotton" matTooltip="Maximize" matTooltipPosition="below">🗖</button>
+    <button (click)="hideNav()" matTooltip="Close" matTooltipPosition="below">X</button>
+      </div>
+</nav>
+<iframe id="iframe" class="iframe" [src]="IframeSafeURL"  [hidden]="isIframeHidden"></iframe>
+</div>

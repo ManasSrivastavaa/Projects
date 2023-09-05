@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+     <ng-container *ngFor="let property of properties; let i=index">
+      <div class="choice">
+      <input type="number" hidden  [value]="property.id" >
+       <label >{{i+1}}.  {{property.propertyName}}</label>
+       <input type="text"  [value]="property.value" #inputvalue (input)="setProperty(property.id,inputvalue.value)">
+      </div>
+     </ng-container>
+     <button class="submit" (click)="setAllProperty()">Submit</button>
+</div>
+
+<div class="containerNav" *ngIf="isEnabled">
+<nav class="navbar" #navbar id="navbar" (cdkDragMoved)="changePosition()" *ngIf="isNavVisible" cdkDrag [style.height.px]="divHeight" [style.width.px]="divWidth" [style.background-color]="divBgColor" [style.left.px]="divLeft" [style.top.px]="divTop">
+  <div class="pDiv"><p [style.font-size.%]="fontSize" [style.font-family]="fontFamily" [style.color]="fontColor">{{fontText}}</p></div>
+  <div class="navButtonDiv" >
+      <button class="navButton"  (click)="showIframe(false)" *ngIf="showMin">_</button>
+      <button class="navButton" (click)="showIframe(true)" *ngIf="showMax">🗖</button>
+      <button class="navButton" (click)="closeDiv()">X</button>
+  </div>
+</nav>
+</div>
+<iframe  class="iframeDiv" [src]="safeURL"  [style.height.px]="iframeHeight" [style.width.px]="iframeWidth"  [style.left.px]="iframeLeft" [style.top.px]="iframeTop" *ngIf="isIframeVisible"></iframe>
+
+
+

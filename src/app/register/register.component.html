@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+<section class="Registration" >
+  <h1>Registration </h1>
+<form [formGroup]="registrationForm" (ngSubmit)="getValueRegistrationForm() " >
+  <div class="inputDiv">
+  <input class="inputs" formControlName="name" placeholder="Enter Your Name" type="text" id="Name">
+  <input class="inputs" formControlName="email" placeholder="Enter Your Email" type="text" id="Email">
+  <input class="inputs" formControlName="password" placeholder="Enter Your password" type="text" id="pwd">
+</div>
+  <input class="button" type="submit" value="Register" >
+</form>
+</section>
+</div>

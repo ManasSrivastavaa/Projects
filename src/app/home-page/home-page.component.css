@@ -1,0 +1,17 @@
+app-chat-widget{
+  /* box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5), 10px 0 10px -10px rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  /* box-shadow: 1px 1px 1px rgb(171, 171, 224),-1px -1px 1px rgb(171, 171, 224); */
+  cursor: move;
+  /* border: 1px solid black; */
+}
+body{
+  height: 90%;
+  width: 100%;
+}
+textarea{
+  position: relative;
+  left: 400px;
+  top:200px;
+}
+

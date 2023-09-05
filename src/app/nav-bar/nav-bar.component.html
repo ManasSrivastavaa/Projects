@@ -1,0 +1,13 @@
+<nav>
+  <img src="../../assets/logo.png" alt="LOGO" id="logo" >
+  <!-- <label for="search">Search</label>
+  <input type="text" placeholder="Search for Products" name="search"> -->
+  <div class="links">
+    <a routerLink="/home">Home</a>
+  </div>
+  <div class="images">
+  <img id="call" src="../../assets/callbg.png" alt="call" matTooltip="Chat" matTooltipPosition="below"
+  [hidden]="this.service.isshowCallHidden" *ngIf="isChatEnabled" (click)="showChatWidget()">
+  <img src="../../assets/setting.png"  *ngIf="isNotLoggedIn" (click)="showAdminPanel()" matTooltip=" Chat Settings" matTooltipPosition="below" alt="setting">
+</div>
+</nav>
